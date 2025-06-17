@@ -4,32 +4,70 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Smile Guest House - Tiruvannamalai</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      margin-bottom: 1.5rem;
+    }
+    .map-link {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #007bff;
+      text-decoration: none;
+    }
+    .map-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+      .card {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <div class="min-h-screen flex flex-col justify-center items-center p-4">
-    <div class="max-w-xl w-full border border-gray-200 rounded-2xl shadow-xl p-6 space-y-6 text-center">
-      <h1 class="text-3xl font-bold text-yellow-600">😊 Smile Guest House</h1>
-      <p class="text-lg">A peaceful stay for <strong>Tiruvannamalai devotees</strong></p>
+<body>
+  <div class="container">
+    <h1>Smile Guest House</h1>
 
-      <div class="text-gray-700">
-        <p class="text-base">
-          📍 <strong>Address:</strong><br>
-          No 83, Kattabomman Street,<br>
-          Near Danish Mission School,<br>
-          Tiruvannamalai – 606601
-        </p>
-        <a href="https://maps.google.com/?q=12.232323,79.074921" target="_blank" class="inline-block mt-2 text-blue-500 hover:underline">
-          👉 View on Google Maps
-        </a>
-      </div>
-
-      <div class="border-t pt-4">
-        <h2 class="text-xl font-semibold text-gray-800">📞 Contact</h2>
-        <p class="text-base mt-1">Balaji – <a href="tel:9940644514" class="text-blue-600 hover:underline">9940644514</a></p>
-      </div>
+    <div class="card">
+      <h2>📍 Address</h2>
+      <p>No. 83, Kattabomman Street,<br>
+         Near Danish Mission School,<br>
+         Tiruvannamalai – 606601</p>
+      <a class="map-link" href="https://maps.google.com/?q=12.232323,79.074921" target="_blank">View on Google Maps</a>
     </div>
-    <footer class="mt-6 text-sm text-gray-400">Made with ❤️ for devotees</footer>
+
+    <div class="card">
+      <h2>📞 Contact</h2>
+      <p>Varun – <a href="tel:9940644514">9940644514</a></p>
+    </div>
+
+    <div class="card">
+      <p style="text-align:center; font-size: 0.9rem; color: #777;">A simple and peaceful accommodation for Tiruvannamalai devotees.</p>
+    </div>
   </div>
 </body>
 </html>
