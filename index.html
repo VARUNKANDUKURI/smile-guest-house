@@ -9,38 +9,46 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
+      background: url('https://i.ibb.co/xFbJTTF/lord-shiva-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 2rem 1rem;
     }
     .container {
       max-width: 800px;
       margin: auto;
-      padding: 2rem 1rem;
     }
     h1 {
       text-align: center;
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      color: #ffd700;
     }
     .card {
-      background: white;
-      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255,255,255,0.2);
       border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
       margin-bottom: 1.5rem;
+      backdrop-filter: blur(6px);
     }
-    .map-link {
-      display: inline-block;
-      margin-top: 1rem;
-      color: #007bff;
+    h2 {
+      color: #ffdd99;
+    }
+    a, a:visited {
+      color: #8bdfff;
       text-decoration: none;
     }
-    .map-link:hover {
+    a:hover {
       text-decoration: underline;
     }
     @media (max-width: 600px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
       }
       .card {
         padding: 1rem;
@@ -49,24 +57,29 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Smile Guest House</h1>
+  <div class="overlay">
+    <div class="container">
+      <h1>🛕 Smile Guest House</h1>
 
-    <div class="card">
-      <h2>📍 Address</h2>
-      <p>No. 83, Kattabomman Street,<br>
-         Near Danish Mission School,<br>
-         Tiruvannamalai – 606601</p>
-      <a class="map-link" href="https://maps.google.com/?q=12.232323,79.074921" target="_blank">View on Google Maps</a>
-    </div>
+      <div class="card">
+        <h2>📍 Address</h2>
+        <p>No. 83, Kattabomman Street,<br>
+           Near Danish Mission School,<br>
+           Tiruvannamalai – 606601</p>
+        <a href="https://maps.google.com/?q=12.232323,79.074921" target="_blank">📌 View on Google Maps</a>
+      </div>
 
-    <div class="card">
-      <h2>📞 Contact</h2>
-      <p>Varun – <a href="tel:9940644514">9940644514</a></p>
-    </div>
+      <div class="card">
+        <h2>📞 Contact</h2>
+        <p>Balaji – <a href="tel:9940444514">9940444514</a></p>
+        <p>📱 WhatsApp – <a href="https://wa.me/919940444514" target="_blank">Chat on WhatsApp</a></p>
+      </div>
 
-    <div class="card">
-      <p style="text-align:center; font-size: 0.9rem; color: #777;">A simple and peaceful accommodation for Tiruvannamalai devotees.</p>
+      <div class="card">
+        <p style="text-align:center; font-size: 0.9rem; color: #ddd;">
+          A peaceful stay for devotees visiting the holy Arunachala.
+        </p>
+      </div>
     </div>
   </div>
 </body>
