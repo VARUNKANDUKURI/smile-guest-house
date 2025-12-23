@@ -3,136 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smile Guest House – Tiruvannamalai</title>
+  <title>Smile Guest House | Tiruvannamalai</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Smile Guest House and PG Rooms near Arunachala Temple, Tiruvannamalai. Clean, peaceful stay for devotees." />
+
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Cache Busting -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
 
   <style>
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --primary: #2563eb;
-      --shadow: 0 10px 25px rgba(0,0,0,0.08);
-      --radius: 14px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 32px 20px 60px;
+      font-family: 'Poppins', sans-serif;
+      background: #f8fafc;
+      color: #1f2937;
     }
 
     /* HEADER */
     header {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      margin-bottom: 32px;
     }
 
     .title {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
+      color: #1e293b;
     }
 
-    .title img {
-      width: 34px;
-      height: auto;
-    }
-
-    .top-contact {
-      display: flex;
-      gap: 12px;
+    .contact {
       font-size: 0.95rem;
-      align-items: center;
-      flex-wrap: wrap;
     }
 
-    .top-contact a {
-      color: var(--primary);
-      font-weight: 600;
+    .contact a {
+      color: #2563eb;
       text-decoration: none;
+      font-weight: 500;
+      margin-left: 8px;
     }
 
-    .top-contact a:hover {
+    .contact a:hover {
       text-decoration: underline;
     }
 
-    /* GRID */
+    /* LAYOUT */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 20px;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
     }
 
-    @media (max-width: 900px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-      header {
-        justify-content: center;
-        gap: 14px;
-      }
-    }
-
-    /* CARD */
     .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 22px;
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     .card h2 {
       margin-top: 0;
-      margin-bottom: 10px;
+      color: #111827;
     }
 
-    .address {
+    .card p {
+      color: #4b5563;
       line-height: 1.6;
-      color: var(--muted);
-      margin-bottom: 10px;
     }
 
-    .map-link {
-      display: inline-block;
-      margin-bottom: 16px;
-      color: var(--primary);
-      font-weight: 600;
+    .card a {
+      color: #2563eb;
       text-decoration: none;
+      font-weight: 500;
     }
 
-    .map-link:hover {
-      text-decoration: underline;
-    }
-
-    /* SLIDER */
+    /* IMAGE SLIDER */
     .slider {
       position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      margin-top: 14px;
+      margin-top: 15px;
     }
 
     .slider img {
       width: 100%;
-      height: 260px;
-      object-fit: cover;
+      border-radius: 12px;
       display: none;
     }
 
@@ -147,113 +115,116 @@
       background: rgba(0,0,0,0.6);
       color: white;
       border: none;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
+      font-size: 20px;
+      padding: 6px 10px;
       cursor: pointer;
-      font-size: 18px;
+      border-radius: 50%;
     }
 
-    .nav.prev { left: 10px; }
-    .nav.next { right: 10px; }
+    .nav.left { left: 10px; }
+    .nav.right { right: 10px; }
 
     /* FOOTER */
     footer {
       text-align: center;
-      margin-top: 50px;
-      color: var(--muted);
+      margin: 40px 0 20px;
+      color: #6b7280;
       font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+
+      .title {
+        font-size: 1.8rem;
+      }
     }
   </style>
 </head>
 
 <body>
 
+<header>
+  <div class="title">Smile Guest House</div>
+
+  <div class="contact">
+    📞
+    <a href="tel:9940644514">Balaji – 9940644514</a> |
+    <a href="tel:6383992770">Satham – 6383992770</a> |
+    <a href="https://wa.me/919940644514" target="_blank">WhatsApp</a>
+  </div>
+</header>
+
 <div class="container">
+  <div class="grid">
 
-  <!-- HEADER -->
-  <header>
-    <div class="title">
-      <img src="temple.png" alt="Temple" />
-      Smile Guest House
-    </div>
-
-    <div class="top-contact">
-      📞 <a href="tel:9940644514">Balaji – 9940644514</a>
-      |
-      <a href="tel:6383992770">Satham – 6383992770</a>
-      |
-      <a href="https://wa.me/919940644514" target="_blank">💬 WhatsApp</a>
-    </div>
-  </header>
-
-  <!-- CONTENT -->
-  <section class="grid">
-
-    <!-- GUEST HOUSE -->
+    <!-- Guest House -->
     <div class="card">
       <h2>📍 Guest House</h2>
-
-      <div class="address">
+      <p>
         No. 83, Kattabomman Street,<br>
         Near Danish Mission School,<br>
         Tiruvannamalai – 606601
-      </div>
+      </p>
+      <a href="https://maps.google.com" target="_blank">📌 View on Google Maps</a>
 
-      <a class="map-link" href="https://maps.google.com" target="_blank">
-        📌 View on Google Maps
-      </a>
-
-      <div class="slider" data-slider="guest">
-        <img src="smile_guest_house_1.jpeg" class="active">
-        <img src="smile_guest_house_2.jpeg">
-        <img src="smile_guest_house_3.jpeg">
-        <img src="smile_guest_house_4.jpeg">
-        <img src="smile_guest_house_5.jpeg">
-
-        <button class="nav prev" onclick="moveSlide('guest', -1)">‹</button>
-        <button class="nav next" onclick="moveSlide('guest', 1)">›</button>
+      <div class="slider" id="guestSlider">
+        <button class="nav left" onclick="prev('guest')">‹</button>
+        <img src="smile_guest_house_1.jpeg?v=1" class="active">
+        <img src="smile_guest_house_2.jpeg?v=1">
+        <img src="smile_guest_house_3.jpeg?v=1">
+        <img src="smile_guest_house_4.jpeg?v=1">
+        <img src="smile_guest_house_5.jpeg?v=1">
+        <button class="nav right" onclick="next('guest')">›</button>
       </div>
     </div>
 
-    <!-- PG ROOMS -->
+    <!-- PG Rooms -->
     <div class="card">
       <h2>🏠 PG Rooms</h2>
-
-      <div class="address">
+      <p>
         No. 28, Kattabomman Street,<br>
         Near Danish Mission School,<br>
         Tiruvannamalai – 606601
-      </div>
+      </p>
 
-      <div class="slider" data-slider="pg">
-        <img src="PG_1.jpeg" class="active">
-        <img src="PG_2.jpeg">
-        <img src="PG_3.jpeg">
-        <img src="PG_4.jpeg">
-
-        <button class="nav prev" onclick="moveSlide('pg', -1)">‹</button>
-        <button class="nav next" onclick="moveSlide('pg', 1)">›</button>
+      <div class="slider" id="pgSlider">
+        <button class="nav left" onclick="prev('pg')">‹</button>
+        <img src="PG_1.jpeg?v=1" class="active">
+        <img src="PG_2.jpeg?v=1">
+        <img src="PG_3.jpeg?v=1">
+        <img src="PG_4.jpeg?v=1">
+        <button class="nav right" onclick="next('pg')">›</button>
       </div>
     </div>
 
-  </section>
-
-  <footer>
-    A peaceful stay for devotees visiting the holy Arunachala.
-  </footer>
-
+  </div>
 </div>
 
-<script>
-  function moveSlide(name, step) {
-    const slider = document.querySelector(`[data-slider="${name}"]`);
-    const images = slider.querySelectorAll("img");
-    let index = [...images].findIndex(img => img.classList.contains("active"));
+<footer>
+  A peaceful stay for devotees visiting the holy Arunachala.
+</footer>
 
-    images[index].classList.remove("active");
-    index = (index + step + images.length) % images.length;
-    images[index].classList.add("active");
+<script>
+  function next(type) {
+    const slider = document.getElementById(type + 'Slider');
+    const images = slider.querySelectorAll('img');
+    let index = [...images].findIndex(img => img.classList.contains('active'));
+    images[index].classList.remove('active');
+    images[(index + 1) % images.length].classList.add('active');
+  }
+
+  function prev(type) {
+    const slider = document.getElementById(type + 'Slider');
+    const images = slider.querySelectorAll('img');
+    let index = [...images].findIndex(img => img.classList.contains('active'));
+    images[index].classList.remove('active');
+    images[(index - 1 + images.length) % images.length].classList.add('active');
   }
 </script>
 
