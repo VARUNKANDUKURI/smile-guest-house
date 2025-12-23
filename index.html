@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Cache busting -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
   <title>Smile Guest House – Tiruvannamalai</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
@@ -16,16 +22,20 @@
     }
 
     .container {
-      max-width: 1100px;
+      max-width: 1150px;
       margin: auto;
       padding: 2rem 1rem 3rem;
     }
 
     h1 {
       text-align: center;
-      font-size: 2.2rem;
+      font-size: 2.3rem;
       margin-bottom: 2.5rem;
       color: #1f2937;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
 
     .grid {
@@ -37,34 +47,33 @@
     .card {
       background: #fff;
       border-radius: 14px;
-      padding: 1.5rem 1.8rem;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      padding: 1.6rem 1.8rem;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.08);
     }
 
     .card h2 {
       margin-top: 0;
-      font-size: 1.3rem;
+      font-size: 1.35rem;
+      margin-bottom: 0.8rem;
       color: #111827;
-      margin-bottom: 1rem;
     }
 
-    .card p {
+    p {
       line-height: 1.6;
-      margin: 0.4rem 0;
+      margin: 0.35rem 0;
       color: #374151;
     }
 
     a {
       color: #2563eb;
-      text-decoration: none;
       font-weight: 600;
+      text-decoration: none;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
-    /* Contact */
     .contact {
       margin-top: 1rem;
     }
@@ -93,11 +102,11 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.65);
       color: #fff;
       border: none;
-      font-size: 1.5rem;
-      padding: 0.4rem 0.7rem;
+      font-size: 1.6rem;
+      padding: 0.35rem 0.7rem;
       cursor: pointer;
       border-radius: 50%;
     }
@@ -124,86 +133,107 @@
 </head>
 
 <body>
+<div class="container">
 
-  <div class="container">
-    <h1>Smile Guest House</h1>
+  <!-- Title -->
+  <h1>🛕 Smile Guest House</h1>
 
-    <div class="grid">
+  <div class="grid">
 
-      <!-- Guest House -->
-      <div class="card">
-        <h2>📍 Guest House</h2>
+    <!-- Guest House -->
+    <div class="card">
+      <h2>📍 Guest House</h2>
+      <p>
+        No. 83, Kattabomman Street,<br>
+        Near Danish Mission School,<br>
+        Tiruvannamalai – 606601
+      </p>
+
+      <p>
+        📌 <a href="https://maps.google.com/?q=12.232323,79.074921" target="_blank">
+          View on Google Maps
+        </a>
+      </p>
+
+      <div class="contact">
+        <p><strong>📞 Contact</strong></p>
         <p>
-          No. 83, Kattabomman Street,<br>
-          Near Danish Mission School,<br>
-          Tiruvannamalai – 606601
+          Balaji – <a href="tel:9940644514">9940644514</a><br>
+          Satham – <a href="tel:6383992770">6383992770</a>
         </p>
-
         <p>
-          📌 <a href="https://maps.google.com/?q=12.232323,79.074921" target="_blank">
-            View on Google Maps
-          </a>
+          📱 <a href="https://wa.me/919940644514" target="_blank">Chat on WhatsApp</a>
         </p>
-
-        <div class="contact">
-          <p><strong>📞 Contact</strong></p>
-          <p>
-            Balaji – <a href="tel:9940644514">9940644514</a><br>
-            Satham – <a href="tel:6383992770">6383992770</a>
-          </p>
-          <p>
-            📱 <a href="https://wa.me/919940644514" target="_blank">Chat on WhatsApp</a>
-          </p>
-        </div>
       </div>
 
-      <!-- PG Rooms -->
-      <div class="card">
-        <h2>🏠 PG Rooms</h2>
-        <p>
-          No. 28, Kattabomman Street,<br>
-          Near Danish Mission School,<br>
-          Tiruvannamalai – 606601
-        </p>
-
-        <div class="slider">
-          <div class="slides" id="slides">
-            <img src="PG_1.jpeg" alt="PG Room 1">
-            <img src="PG_2.jpeg" alt="PG Room 2">
-            <img src="PG_3.jpeg" alt="PG Room 3">
-            <img src="PG_4.jpeg" alt="PG Room 4">
-          </div>
-          <button class="arrow left" onclick="prev()">‹</button>
-          <button class="arrow right" onclick="next()">›</button>
+      <!-- Guest House Images -->
+      <div class="slider">
+        <div class="slides" id="guestSlides">
+          <img src="smile_guest_house_1.jpeg?v=1">
+          <img src="smile_guest_house_2.jpeg?v=1">
+          <img src="smile_guest_house_3.jpeg?v=1">
+          <img src="smile_guest_house_4.jpeg?v=1">
+          <img src="smile_guest_house_5.jpeg?v=1">
         </div>
+        <button class="arrow left" onclick="prev('guest')">‹</button>
+        <button class="arrow right" onclick="next('guest')">›</button>
       </div>
-
     </div>
 
-    <div class="footer">
-      A peaceful stay for devotees visiting holy Arunachala.
+    <!-- PG Rooms -->
+    <div class="card">
+      <h2>🏠 PG Rooms</h2>
+      <p>
+        No. 28, Kattabomman Street,<br>
+        Near Danish Mission School,<br>
+        Tiruvannamalai – 606601
+      </p>
+
+      <div class="slider">
+        <div class="slides" id="pgSlides">
+          <img src="PG_1.jpeg?v=1">
+          <img src="PG_2.jpeg?v=1">
+          <img src="PG_3.jpeg?v=1">
+          <img src="PG_4.jpeg?v=1">
+        </div>
+        <button class="arrow left" onclick="prev('pg')">‹</button>
+        <button class="arrow right" onclick="next('pg')">›</button>
+      </div>
     </div>
+
   </div>
 
-  <script>
-    let index = 0;
-    const slides = document.getElementById("slides");
+  <div class="footer">
+    A peaceful stay for devotees visiting holy Arunachala.
+  </div>
+</div>
+
+<script>
+  let guestIndex = 0;
+  let pgIndex = 0;
+
+  function show(type) {
+    const slides = document.getElementById(type + "Slides");
+    const index = type === 'guest' ? guestIndex : pgIndex;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  function next(type) {
+    const slides = document.getElementById(type + "Slides");
     const total = slides.children.length;
+    if (type === 'guest') guestIndex = (guestIndex + 1) % total;
+    else pgIndex = (pgIndex + 1) % total;
+    show(type);
+  }
 
-    function showSlide() {
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    }
-
-    function next() {
-      index = (index + 1) % total;
-      showSlide();
-    }
-
-    function prev() {
-      index = (index - 1 + total) % total;
-      showSlide();
-    }
-  </script>
+  function prev(type) {
+    const slides = document.getElementById(type + "Slides");
+    const total = slides.children.length;
+    if (type === 'guest') guestIndex = (guestIndex - 1 + total) % total;
+    else pgIndex = (pgIndex - 1 + total) % total;
+    show(type);
+  }
+</script>
 
 </body>
 </html>
